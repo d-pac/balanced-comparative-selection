@@ -1,8 +1,6 @@
  [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-url]][daviddm-image]
 
-> Comparative selection algorithm plugin for d-pac platform
-
-Based on [NoMoreMarking's `cj` module](https://github.com/NoMoreMarking/cj).
+> Balanced comparative selection algorithm plugin for d-pac platform
 
 ## Description
 
@@ -11,10 +9,11 @@ The algorithm accepts a queue (Array) of items, then:
 1.  pseudo-randomizes the queue order
 2.  sorts the queue by `compared.length`
 3.  retains the first item as 'selected'
-4.  retains the next valid item as 'opponent':
-    -   either, the next item in the (shuffled) queue when 'selected' has no previous comparisons.
-    -   or, the next item in the (shuffled) queue 'selected' hasn't been compared to yet.
-5.  returns both items
+4.  finds its position in the list sorted by ability
+5.  retains the next valid item as 'opponent':
+    -   from the other half of the ability sorted list
+    -   giving preference to the items 'selected' has been compared with the least
+6.  returns both items
 
 ## Install
 
@@ -41,6 +40,7 @@ Type: [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
 **Properties**
 
 -   `id` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** ID of the item
+-   `ability` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** the ability of the item
 -   `compared` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)>** An array containing id's of the items this item has been compared with.
     N.B. this _must_ contain duplicate ID's if the item has been compared multiple times with another item.
 

@@ -1,19 +1,19 @@
 {
-  "name": "comparative-selection",
-  "version": "4.0.0",
-  "description": "Comparative selection algorithm plugin for d-pac platform",
-  "homepage": "https://github.com/d-pac/comparative-selection",
+  "name": "balanced-comparative-selection",
+  "version": "0.0.0",
+  "description": "Balanced comparative selection algorithm plugin for d-pac platform",
+  "homepage": "https://github.com/d-pac/balanced-comparative-selection",
   "author": {
     "name": "d-pac",
     "email": "info@d-pac.be",
     "url": "http://www.d-pac.be"
   },
-  "repository": "d-pac/comparative-selection",
-  "license": "GPL v3",
+  "repository": "https://github.com/d-pac/balanced-comparative-selection",
+  "license": "GPL-3.0",
   "files": [
-    "lib/comparativeSelection.js"
+    "lib/selection.js"
   ],
-  "main": "lib/comparativeSelection.js",
+  "main": "lib/selection.js",
   "keywords": [
     "d-pac.plugin",
     "d-pac",
@@ -41,8 +41,8 @@
   },
   "d-pac": [
     {
-      "name": "comparative-selection",
-      "description": "Simple comparative selection algorithm based on [NoMoreMarking's `cj` module](https://github.com/NoMoreMarking/cj)",
+      "name": "balanced-comparative-selection",
+      "description": "Balanced comparative selection algorithm",
       "type": "select"
     }
   ]
