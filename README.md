@@ -59,7 +59,8 @@ Simple comparative selection algorithm
 
 **Parameters**
 
--   `items` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[Item](#item)>** An array of [Item](#item)s
+-   `payload` **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** The payload object
+    -   `payload.items` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[Item](#item)>** An array of [Item](#item)s
 
 **Examples**
 
