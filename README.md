@@ -18,13 +18,13 @@ The algorithm accepts a queue (Array) of items, then:
 ## Install
 
 ```sh
-$ yarn add comparative-selection
+$ yarn add balanced-comparative-selection
 ```
 
 ## Usage
 
 ```js
-var cs = require('comparative-selection');
+var cs = require('balanced-comparative-selection');
 
 cs.select( representations );
 ```
